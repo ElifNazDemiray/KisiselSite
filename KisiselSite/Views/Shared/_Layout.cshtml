@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kişisel Web Sitem</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+     
+        body {
+            background-image: url('/images/gemini.jpg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+     
+        .main-container {
+            margin-top: 50px;
+            padding: 20px;
+          
+            background-color: transparent !important;
+            box-shadow: none !important;
+            border: none !important;
+        }
+
+     
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.15) !important; 
+            backdrop-filter: blur(5px); 
+            border: none !important;
+        }
+       
+        .nav-link {
+            color: black !important; 
+            font-weight: 800 !important; 
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+      
+            .nav-link:hover {
+                color: pink !important; 
+                transform: translateY(-2px);
+            }
+
+          
+            .nav-link:hover {
+                color: pink  !important;
+                transform: translateY(-2px);
+            }
+
+        .btn:hover {
+            background-color: pink  !important;
+            border-color: pink  !important;
+            color: white !important;
+        }
+
+
+
+
+
+
+
+ 
+        .btn {
+            border: 2px solid pink  !important; 
+            background-color: transparent !important; 
+            color: black !important; 
+            font-weight: bold;
+            border-radius: 10px; 
+            transition: all 0.3s ease-in-out;
+        }
+
+           
+            .btn:hover, .btn:focus, .btn:active {
+                background-color: pink  !important; 
+                color: white !important; 
+                box-shadow: 0 0 10px rgba(255, 182, 193, 0.6); 
+            }
+
+       
+        .navbar-nav {
+            border: 1px solid pink  !important;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg py-3">
+        <div class="container justify-content-center">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav p-2 mb-0 rounded-pill">
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Hakkimda">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Yeteneklerim">Yeteneklerim</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Projelerim">Projelerim</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Deneyimlerim">Deneyimler</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Iletisim">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-container">
+        @RenderBody()
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

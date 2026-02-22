@@ -1,0 +1,122 @@
+﻿@{
+    <style>
+        .navbar-nav .nav-link {
+            transition: all 0.3s ease !important;
+        }
+
+            .navbar-nav .nav-link:hover {
+                color: pink !important;
+                transform: scale(1.1);
+            }
+
+
+        .custom-btn-pink {
+            transition: all 0.3s ease !important;
+        }
+
+            .custom-btn-pink:hover {
+                background-color: orchid !important;
+                transform: translateY(-3px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+            }
+
+
+        .custom-btn-outline-pink {
+            transition: all 0.3s ease !important;
+        }
+
+            .custom-btn-outline-pink:hover {
+                background-color: pink !important;
+                color: white !important;
+                transform: translateY(-3px);
+            }
+    </style>
+    ViewData["Title"] = "Anasayfa";
+}
+
+<section class="hero-bg">
+    <div class="container">
+        <div class="row align-items-center content-box">
+            <div class="col-lg-7 text-center text-lg-start">
+                <h1 class="display-4 fw-bold">
+                    Merhaba, Ben <span class="highlight">Elif Naz Demiray</span>
+                </h1>
+                <p class="fs-4 fw-bold mt-3 text-dark">
+                    Samsun Üniversitesi'nde 1. sınıf öğrencisiyim. <br />
+                    <span class="fw-bolder highlight-text">Arka yüz (Backend) yazılım geliştirme</span> dünyasına yeni adım attım ve kendimi geliştirmeye devam ediyorum.
+                </p>
+                <div class="mt-4">
+                    <a asp-controller="Home" asp-action="Projelerim" class="btn btn-pink">Çalışmalarım</a>
+                    <a asp-action="Iletisim" class="btn custom-btn-outline-pink shadow-sm ms-2" style="color: black !important;">İletişim</a>
+                </div>
+            </div>
+
+            <div class="col-lg-5 text-center mt-5 mt-lg-0">
+                <img src="/images/pp.jpg.jpeg"
+                     class="img-fluid rounded-circle shadow-lg border border-5 border-white profile-img"
+                     alt="Elif Naz Demiray" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+
+    .hero-bg {
+        background-image: url('/images/image_1f7bda.jpg');
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 50px 0;
+    }
+
+    .content-box {
+        background: rgba(255, 255, 255, 0.85);
+        padding: 50px;
+        border-radius: 30px;
+        border: 4px solid pink;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        backdrop-filter: blur(10px);
+    }
+
+
+    .highlight {
+        color: pink
+    }
+
+    .highlight-text {
+        color: gray;
+        border-bottom: 2px solid pink ;
+    }
+
+
+    .custom-btn-pink {
+        background-color: pink !important;
+        color: black !important;
+        font-weight: bold !important;
+        padding: 10px 25px !important;
+        border-radius: 10px !important;
+    }
+
+    .custom-btn-outline-pink {
+        border: 2px solid pink !important;
+        color: pink !important;
+        background: transparent !important;
+        font-weight: bold !important;
+        padding: 10px 25px !important;
+        border-radius: 10px !important;
+    }
+
+    .profile-img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+</style>

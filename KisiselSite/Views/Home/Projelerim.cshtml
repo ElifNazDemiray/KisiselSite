@@ -1,0 +1,47 @@
+﻿<div class="container mt-5">
+    <h2 class="mb-4 text-center">Önceki Web Çalışmalarım</h2>
+    <div class="row">
+        @{
+
+            var projeler = new[] {
+                new { Id = "p1", Baslik = "Kişisel Blog", Resim = "ss1.jpg.png", Aciklama = "Kişisel Tanıtım Sayfası (Pembe Tema):Bootstrap'in temel grid yapısını ve hazır CSS bileşenlerini özelleştirerek oluşturduğum ilk kişisel tanıtım şablonu çalışmam. Renk paletlerini CSS değişkenleri ile modifiye etmeyi öğrendim." },
+                new { Id = "p2", Baslik = "Kişisel Blog", Resim = "ss2.jpg.png", Aciklama = "Foto Galeri Arayüzü:Bootstrap 'Album' şablonu üzerine inşa edilen, tamamen responsive (mobil uyumlu) fotoğraf galerisi çalışması. Kart yapıları (Cards) ve navigasyon çubuğu özelleştirmeleri içerir." },
+                new { Id = "p3", Baslik = "Mobilya Çalışması", Resim = "ss3.jpg.png", Aciklama = "Çakıl Mobilya (Dark Mode):Bootstrap'in karanlık mod özelliklerini ve tipografi hiyerarşisini kullanarak bir montaj firması için hazırladığım modern landing page şablonu." },
+                new { Id = "p4", Baslik = "Mobilya Çalışması", Resim = "ss4.jpg.png", Aciklama = "Hakkımızda Sayfası (Portfolyo):Bootstrap Utility sınıfları ile 'Hakkımızda' ve 'Referanslar' bölümlerini modern bir arayüze kavuşturduğum, kullanıcı deneyimi (UX) odaklı bir arayüz çalışması."}
+                };
+        }
+
+        @foreach (var p in projeler)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm h-100 text-center">
+                    <img src="~/images/@p.Resim" class="card-img-top p-2" alt="@p.Baslik"
+                         style="max-height: 300px; object-fit: contain; cursor: zoom-in;"
+                         data-bs-toggle="modal" data-bs-target="#modal-@p.Id">
+
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">@p.Baslik</h5>
+                        <p class="card-text small text-muted">@p.Aciklama</p>
+                        <button type="button" class="btn btn-sm btn-pink" data-bs-toggle="modal" data-bs-target="#modal-@p.Id">
+                            Büyütülmüş Hali Gör
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modal-@p.Id" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">@p.Baslik</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center bg-light">
+                            <img src="~/images/@p.Resim" class="img-fluid rounded" alt="@p.Baslik">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
