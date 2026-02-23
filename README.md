@@ -8,7 +8,7 @@ Merhaba! Bu projede ASP.NET Core MVC yapısını kullanarak kendimi tanıttığ�
 ![Ana Sayfa](anasayfa.jpg.png)
 
 #### 🎓 Deneyimlerim
-![Deneyimlerim](deneyimler.jpg.png)
+![Deneyimlerim](deneyimler.jpg%20.png)
 
 #### 👩‍💻 Hakkımda
 ![Hakkımda](hakkimda.jpg.png)
@@ -20,7 +20,7 @@ Merhaba! Bu projede ASP.NET Core MVC yapısını kullanarak kendimi tanıttığ�
 ![Projelerim](projelerim.jpg.png)
 
 #### 📞 İletişim
-![İletişim](iletişim.jpg.png)
+![İletişim](iletişim.jpg%20.png)
 
 ---
 *Bu proje Elif Naz Demiray tarafından geliştirilmiştir.*
